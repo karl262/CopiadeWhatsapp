@@ -1,0 +1,79 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+      <ion-button>
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Llamadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Favoritos</ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/avatar_icon.png" alt="Avatar">
+      </ion-avatar>
+      <ion-label>
+        <h2>Sweetheart 💕</h2>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="call-outline" color="success"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="videocam-outline" color="success"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <ion-list-header>Recientes</ion-list-header>
+    <ion-item *ngFor="let call of calls">
+      <ion-avatar slot="start">
+        <img [src]="call.avatar" alt="Avatar">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ call.name }}</h2>
+        <p>{{ call.time }}</p>
+      </ion-label>
+      <ion-button slot="end" color="success">
+        <ion-icon name="call-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment color="primary">
+      <ion-segment-button value="chats"  routerLink="/dashboard">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+        <ion-label>Chats</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="communities"  routerLink="/community">
+        <ion-icon name="people-outline"></ion-icon>
+        <ion-label>Comunidades</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="updates" routerLink="/news">
+        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        <ion-label>Novedades</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="calls" routerLink="/calls">
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-label>Llamadas</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>
