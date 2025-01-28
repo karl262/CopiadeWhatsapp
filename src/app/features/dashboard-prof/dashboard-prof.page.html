@@ -1,0 +1,45 @@
+<ion-header>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/dashboard"></ion-back-button>
+  </ion-buttons>
+  <ion-title>Perfil</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+<div class="profile-container">
+  <ion-avatar class="profile-avatar">
+    <img src="assets/avatar_icon.png" alt="Perfil">
+    <ion-button class="camera-button" fill="clear">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-button>
+  </ion-avatar>
+</div>
+
+<ion-list>
+  <ion-item>
+    <ion-icon slot="start" name="person-outline"></ion-icon>
+    <ion-label>
+      <h2>Nombre</h2>
+      <p>Carlos Hipolito</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+    <ion-label>
+      <h2>Info.</h2>
+      <p>Drop out, fool</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon slot="start" name="call-outline"></ion-icon>
+    <ion-label>
+      <h2>Teléfono</h2>
+      <p>+52 271 122 2874</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

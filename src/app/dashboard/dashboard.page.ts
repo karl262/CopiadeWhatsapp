@@ -8,6 +8,7 @@ import { NavController } from '@ionic/angular';
 })
 export class DashboardPage implements OnInit {
 
+  isDropdownOpen = false;
   chats = [
     { name: 'Equipo 6', message: 'Buenas tardes compañeros', date: '17/5/2024', avatar: 'assets/avatar_icon.png' },
     { name: 'Mom', message: 'Bye mamá', date: '', avatar: 'assets/avatar_icon.png' },
@@ -19,6 +20,13 @@ export class DashboardPage implements OnInit {
 
   openNewChatPage() {
     this.navCtrl.navigateForward('/chats');
+  }
+  closeDropdown() {
+    this.isDropdownOpen = false;
+  }
+
+  goToProfile() {
+    this.navCtrl.navigateForward('/dashboard-prof');
   }
 
   ngOnInit() {

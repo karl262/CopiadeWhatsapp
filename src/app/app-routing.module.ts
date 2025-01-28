@@ -29,6 +29,10 @@ const routes: Routes = [
     path: 'calls',
     loadChildren: () => import('./calls/calls.module').then( m => m.CallsPageModule)
   },
+  {
+    path: 'dashboard-prof',
+    loadChildren: () => import('./features/dashboard-prof/dashboard-prof.module').then( m => m.DashboardProfPageModule)
+  },
 ];
 
 @NgModule({
